@@ -1,5 +1,8 @@
 # Student Survival Hub 🎓
 
+> “Surviving college is not just about studying hard,
+> it is about growing, learning, failing, and rising again every single day.”
+
 Student Survival Hub is a beginner-friendly multi-page website created using HTML.
 This project is designed to help students manage studies, placements, productivity, and stress in one place.
 
