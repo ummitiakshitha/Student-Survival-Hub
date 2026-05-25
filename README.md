@@ -3,49 +3,77 @@
 > “Surviving college is not just about studying hard,
 > it is about growing, learning, failing, and rising again every single day.”
 
-Student Survival Hub is a beginner-friendly multi-page website created using HTML.
-This project is designed to help students manage studies, placements, productivity, and stress in one place.
+This project was created to help students manage:
+- 📚 Study resources
+- ⏰ Daily timetable
+- 💼 Placement preparation
+- 🎵 Stress relief
+- 📩 Feedback and contact
 
-## Features
+The website focuses on creating a clean, peaceful, and student-friendly experience with modern UI design, glassmorphism effects, responsive layouts, animations, and aesthetic background images.
 
-* Home page
-* Navigation bar
-* Study resources page
-* Daily timetable
-* Placement preparation section
-* Stress relief page
-* Contact form
-* Embedded YouTube video using iframe
-* Multiple linked pages
+---
 
-## Technologies Used
+# ✨ Features
 
-* HTML5
+- Modern responsive UI
+- Multi-page website
+- Glassmorphism card design
+- Coding resources section
+- Daily timetable page
+- Placement preparation section
+- Relaxing music section
+- Contact form
+- Hover animations and smooth transitions
+- Different background images for each page
 
-## HTML Concepts Covered
+---
 
-* Semantic tags
-* Tables
-* Forms
-* Lists
-* Images
-* Links
-* Iframes
-* Navigation bars
-* Multiple pages
+# 🛠️ Technologies Used
 
-## Project Purpose
+- HTML5
+- CSS3
+- Flexbox
+- CSS Grid
+- Media Queries
+- Google Fonts
 
-This project was built to practice and improve HTML skills before learning CSS and JavaScript.
+---
 
-## Future Improvements
+# 📂 Pages Included
 
-* Add CSS styling
-* Responsive design
-* Dark mode
-* Animations
-* JavaScript functionality
+- Home
+- Resources
+- Timetable
+- Placements
+- Stress Relief
+- Contact
 
-## Author
+---
 
-Akshitha
+# 📖 What I Learned
+
+Through this project, I learned:
+- Responsive web design
+- Modern UI styling
+- CSS animations and layouts
+- Multi-page website structure
+- Git and GitHub basics
+- Frontend project organization
+
+---
+
+# 🚀 Future Improvements
+
+- JavaScript functionality
+- Backend integration
+- MERN Developemnt
+- Deployment
+
+---
+
+
+
+# 🌸 Quote
+
+> “Small progress is still progress.”
