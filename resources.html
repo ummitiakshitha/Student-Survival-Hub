@@ -1,9 +1,12 @@
 <!DOCTYPE html>
-
+<html lang="en">
 
 <head>
 
-    
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
     <title>Study Resources</title>
 
@@ -45,147 +48,32 @@
         <a href="contact.html">Contact</a>
 
     </div>
-<<<<<<< HEAD
-=======
+
     <button id="dark-mode-toggle">
         🌙
     </button>
->>>>>>> 900b975 (Added basicjavascript and changed some features)
 
 </nav>
 
 
-<section class="goals">
 
-    <h2>📚 Study Resources</h2>
+<section class="resources-hero">
 
-    <input type="text"
-<<<<<<< HEAD
-           placeholder="Search resources..."
-           class="search-bar">
+    <div class="resources-text">
 
-=======
-       placeholder="Search resources..."
-       class="search-bar"
-       id="resource-search">
->>>>>>> 900b975 (Added basicjavascript and changed some features)
+        <span class="hero-tag">
+            Smart Learning Space
+        </span>
 
-    <div class="features">
+        <h1>
+            Explore Premium Learning Resources 📚
+        </h1>
 
-
-        <div class="resource-card">
-
-            <h3>💻 GeeksforGeeks</h3>
-
-            <p>
-                Learn DSA, coding,
-                interview preparation,
-                and competitive programming.
-            </p>
-
-            <a href="https://www.geeksforgeeks.org/"
-               target="_blank"
-               class="btn">
-               Visit
-            </a>
-
-        </div>
-
-
-
-        <div class="resource-card">
-
-            <h3>🧠 LeetCode</h3>
-
-            <p>
-                Practice coding problems
-                and improve problem-solving skills.
-            </p>
-
-            <a href="https://leetcode.com/"
-               target="_blank"
-               class="btn">
-               Visit
-            </a>
-
-        </div>
-
-
-
-        <div class="resource-card">
-
-            <h3>🌐 W3Schools</h3>
-
-            <p>
-                Learn HTML, CSS,
-                JavaScript, SQL,
-                and web development basics.
-            </p>
-
-            <a href="https://www.w3schools.com/"
-               target="_blank"
-               class="btn">
-               Visit
-            </a>
-
-        </div>
-
-
-
-        <div class="resource-card">
-
-            <h3>🎥 Code With Harry</h3>
-
-            <p>
-                Beginner-friendly coding tutorials
-                for web development and programming.
-            </p>
-
-            <a href="https://www.youtube.com/codewithharry"
-               target="_blank"
-               class="btn">
-               Watch
-            </a>
-
-        </div>
-
-
-
-        <div class="resource-card">
-
-            <h3>🚀 freeCodeCamp</h3>
-
-            <p>
-                Full coding tutorials,
-                certifications,
-                and real-world projects.
-            </p>
-
-            <a href="https://www.youtube.com/@freecodecamp"
-               target="_blank"
-               class="btn">
-               Watch
-            </a>
-
-        </div>
-
-
-
-        <div class="resource-card">
-
-            <h3>🎨 Bro Code</h3>
-
-            <p>
-                Practice coding along with building real world projects and improve your learning.  
-            </p>
-
-            <a href="https://www.youtube.com/channel/UC4SVo0Ue36XCfOyb5Lh1viQ"
-               target="_blank"
-               class="btn">
-               Watch
-            </a>
-
-        </div>
+        <p>
+            Discover coding platforms,
+            tutorials and tools that help
+            you improve your skills faster.
+        </p>
 
     </div>
 
@@ -193,43 +81,262 @@
 
 
 
-<section class="goals">
+<section class="resources-section">
 
-    <h2>📈 Skill Progress</h2>
+    <div class="search-container">
 
-    <div class="progress-box">
-
-        <p>HTML</p>
-
-        <div class="progress">
-
-            <div class="html-progress"></div>
-
-        </div>
+        <input type="text"
+               id="resource-search"
+               placeholder="Search resources...">
 
     </div>
 
 
-    <div class="progress-box">
 
-        <p>CSS</p>
+    <div class="category-buttons">
 
-        <div class="progress">
+        <button class="category-btn"
+                data-category="all">
 
-            <div class="css-progress"></div>
+            All
 
-        </div>
+        </button>
+
+        <button class="category-btn"
+                data-category="web">
+
+            Web Dev
+
+        </button>
+
+        <button class="category-btn"
+                data-category="dsa">
+
+            DSA
+
+        </button>
+
+        <button class="category-btn"
+                data-category="practice">
+
+            Practice
+
+        </button>
+
+        <button class="category-btn"
+                data-category="tutorials">
+
+            Tutorials
+
+        </button>
 
     </div>
 
 
-    <div class="progress-box">
 
-        <p>DSA</p>
+    <div class="resource-grid">
 
-        <div class="progress">
 
-            <div class="dsa-progress"></div>
+
+        <div class="resource-card"
+             data-category="dsa">
+
+            <span class="resource-tag">
+                DSA
+            </span>
+
+            <h2>💻 GeeksforGeeks</h2>
+
+            <p>
+                Learn DSA, interview preparation
+                and competitive programming.
+            </p>
+
+            <div class="resource-bottom">
+
+                <a href="https://www.geeksforgeeks.org/"
+                   target="_blank"
+                   class="btn">
+
+                   Visit
+
+                </a>
+
+                <button class="bookmark-btn">
+                    ⭐
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="resource-card"
+             data-category="practice">
+
+            <span class="resource-tag">
+                Practice
+            </span>
+
+            <h2>🧠 LeetCode</h2>
+
+            <p>
+                Practice coding problems
+                and improve problem-solving.
+            </p>
+
+            <div class="resource-bottom">
+
+                <a href="https://leetcode.com/"
+                   target="_blank"
+                   class="btn">
+
+                   Visit
+
+                </a>
+
+                <button class="bookmark-btn">
+                    ⭐
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="resource-card"
+             data-category="web">
+
+            <span class="resource-tag">
+                Web Dev
+            </span>
+
+            <h2>🌐 W3Schools</h2>
+
+            <p>
+                Learn HTML, CSS,
+                JavaScript and SQL easily.
+            </p>
+
+            <div class="resource-bottom">
+
+                <a href="https://www.w3schools.com/"
+                   target="_blank"
+                   class="btn">
+
+                   Visit
+
+                </a>
+
+                <button class="bookmark-btn">
+                    ⭐
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="resource-card"
+             data-category="tutorials">
+
+            <span class="resource-tag">
+                Tutorials
+            </span>
+
+            <h2>🎥 Code With Harry</h2>
+
+            <p>
+                Beginner-friendly coding tutorials
+                for web development.
+            </p>
+
+            <div class="resource-bottom">
+
+                <a href="https://www.youtube.com/codewithharry"
+                   target="_blank"
+                   class="btn">
+
+                   Watch
+
+                </a>
+
+                <button class="bookmark-btn">
+                    ⭐
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="resource-card"
+             data-category="tutorials">
+
+            <span class="resource-tag">
+                Tutorials
+            </span>
+
+            <h2>🚀 freeCodeCamp</h2>
+
+            <p>
+                Certifications,
+                coding tutorials and projects.
+            </p>
+
+            <div class="resource-bottom">
+
+                <a href="https://www.youtube.com/@freecodecamp"
+                   target="_blank"
+                   class="btn">
+
+                   Watch
+
+                </a>
+
+                <button class="bookmark-btn">
+                    ⭐
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="resource-card"
+             data-category="practice">
+
+            <span class="resource-tag">
+                Practice
+            </span>
+
+            <h2>🎨 Bro Code</h2>
+
+            <p>
+                Learn coding while
+                building real world projects.
+            </p>
+
+            <div class="resource-bottom">
+
+                <a href="https://www.youtube.com/channel/UC4SVo0Ue36XCfOyb5Lh1viQ"
+                   target="_blank"
+                   class="btn">
+
+                   Watch
+
+                </a>
+
+                <button class="bookmark-btn">
+                    ⭐
+                </button>
+
+            </div>
 
         </div>
 
@@ -241,27 +348,13 @@
 
 <section class="quote-section">
 
-<<<<<<< HEAD
     <h2>
-        “Small progress every day adds up to big results.” ✨
+        “Learning never exhausts the mind.” ✨
     </h2>
 
 </section>
 
-=======
-    <h2 id="dynamic-quote">
-        “Small progress every day adds up to big results.” ✨
-    </h2>
-
-    <button id="new-quote-btn">
-        New Quote
-    </button>
-
-</section>
- <script src="script.js"></script>
->>>>>>> 900b975 (Added basicjavascript and changed some features)
-
-
+<script src="script.js"></script>
 
 </body>
 </html>

@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-
+<html lang="en">
 
 <head>
 
-  
+    <meta charset="UTF-8">
 
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
     <title>Contact</title>
 
@@ -22,6 +24,7 @@
           rel="stylesheet">
 
 </head>
+
 <body class="contact-page">
 
 <nav>
@@ -45,14 +48,36 @@
         <a href="contact.html">Contact</a>
 
     </div>
-<<<<<<< HEAD
 
-=======
-<button id="dark-mode-toggle">
+    <button id="dark-mode-toggle">
         🌙
     </button>
->>>>>>> 900b975 (Added basicjavascript and changed some features)
+
 </nav>
+
+
+
+<section class="contact-hero">
+
+    <div class="contact-text">
+
+        <span class="hero-tag">
+            Connect With Us
+        </span>
+
+        <h1>
+            We'd Love Your Feedback 💌
+        </h1>
+
+        <p>
+            Have suggestions, ideas or feedback
+            to improve Student Survival Hub?
+            Feel free to connect with us.
+        </p>
+
+    </div>
+
+</section>
 
 
 
@@ -60,43 +85,134 @@
 
     <div class="contact-container">
 
-        <div class="contact-text">
 
-            <h2>📩 Contact Us</h2>
 
-            <p>
-                Have suggestions, feedback,
-                or ideas to improve Student Survival Hub?
-                Feel free to connect 💖
-            </p>
+        <div class="contact-info">
 
             <img src="https://cdn-icons-png.flaticon.com/512/4233/4233830.png">
+
+            <h2>
+                Let’s Build Something Helpful 🌸
+            </h2>
+
+            <p>
+                Your feedback helps improve
+                the experience for students everywhere.
+            </p>
+
+
+
+            <div class="social-links">
+
+                <a href="#">
+                    🌐
+                </a>
+
+                <a href="#">
+                    📸
+                </a>
+
+                <a href="#">
+                    💼
+                </a>
+
+                <a href="#">
+                    ✉️
+                </a>
+
+            </div>
 
         </div>
 
 
 
-        <div class="contact-form">
+        <div class="contact-form-box">
 
-            <form>
+            <form id="contact-form">
 
                 <input type="text"
+                       id="name"
                        placeholder="Enter your name">
 
                 <input type="email"
+                       id="email"
                        placeholder="Enter your email">
 
                 <input type="tel"
+                       id="phone"
                        placeholder="Enter mobile number">
 
                 <textarea rows="6"
+                          id="message"
                           placeholder="Your feedback"></textarea>
 
                 <button type="submit">
-                    Submit
+
+                    Submit Feedback
+
                 </button>
 
             </form>
+
+            <p id="form-message">
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<section class="faq-section">
+
+    <h2>
+        Frequently Asked Questions ❓
+    </h2>
+
+    <div class="faq-container">
+
+
+
+        <div class="faq-card">
+
+            <h3>
+                Is Student Survival Hub free?
+            </h3>
+
+            <p>
+                Yes, it is completely free for students.
+            </p>
+
+        </div>
+
+
+
+        <div class="faq-card">
+
+            <h3>
+                Can I suggest new features?
+            </h3>
+
+            <p>
+                Absolutely! Feedback and suggestions are welcome.
+            </p>
+
+        </div>
+
+
+
+        <div class="faq-card">
+
+            <h3>
+                Does it work on mobile devices?
+            </h3>
+
+            <p>
+                Yes, the platform is fully responsive.
+            </p>
 
         </div>
 
@@ -108,27 +224,21 @@
 
 <section class="quote-section">
 
-<<<<<<< HEAD
-    <h2>
-        “Every great project starts with a small idea.” ✨
-    </h2>
-
-</section>
-
-
-
-=======
     <h2 id="dynamic-quote">
-        “Small progress every day adds up to big results.” ✨
+
+        “Every great project starts with a small idea.”
+
     </h2>
 
-   
+    <button id="new-quote-btn">
+
+        New Quote
+
+    </button>
 
 </section>
-
 
 <script src="script.js"></script>
->>>>>>> 900b975 (Added basicjavascript and changed some features)
 
 </body>
 </html>

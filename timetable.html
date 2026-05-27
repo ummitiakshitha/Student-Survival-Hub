@@ -1,9 +1,12 @@
 <!DOCTYPE html>
-
+<html lang="en">
 
 <head>
 
-   
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
     <title>Timetable</title>
 
@@ -45,84 +48,160 @@
         <a href="contact.html">Contact</a>
 
     </div>
-<<<<<<< HEAD
-=======
+
     <button id="dark-mode-toggle">
         🌙
     </button>
->>>>>>> 900b975 (Added basicjavascript and changed some features)
 
 </nav>
 
 
 
-<section class="goals">
+<section class="timetable-hero">
 
-    <h2>⏰ Daily Timetable</h2>
+    <div class="timetable-text">
 
-    <table class="modern-table">
+        <span class="hero-tag">
+            Productivity Planner
+        </span>
 
-        <tr>
+        <h1>
+            Plan Your Day Better ⏰
+        </h1>
 
-            <th>Time</th>
+        <p>
+            Organize your schedule,
+            stay productive and
+            manage focus sessions effectively.
+        </p>
 
-            <th>Activity</th>
+    </div>
 
-            <th>Status</th>
+</section>
 
-        </tr>
 
-        <tr>
 
-            <td>7 AM</td>
+<section class="table-section">
 
-            <td>Wake Up</td>
+    <div class="table-container">
 
-            <td> Done</td>
+        <div class="section-top">
 
-        </tr>
+            <h2>Daily Timetable</h2>
 
-        <tr>
+            <div id="live-clock"></div>
 
-            <td>9 AM</td>
+        </div>
 
-            <td>College</td>
+        <table class="modern-table">
 
-            <td> Ongoing</td>
+            <tr>
 
-        </tr>
+                <th>Time</th>
 
-        <tr>
+                <th>Activity</th>
 
-            <td>6 PM</td>
+                <th>Status</th>
 
-            <td>Practice Coding</td>
+            </tr>
 
-            <td> Pending</td>
+            <tr>
 
-        </tr>
+                <td>7 AM</td>
 
-        <tr>
+                <td>Wake Up</td>
 
-            <td>8 PM</td>
+                <td>
+                    <input type="checkbox">
+                </td>
 
-            <td>Revision</td>
+            </tr>
 
-            <td> Pending</td>
+            <tr>
 
-        </tr>
+                <td>9 AM</td>
 
-        <tr>
+                <td>College</td>
 
-            <td>10 PM</td>
+                <td>
+                    <input type="checkbox">
+                </td>
 
-            <td>Sleep</td>
+            </tr>
 
-            <td> Pending</td>
+            <tr>
 
-        </tr>
+                <td>6 PM</td>
 
-    </table>
+                <td>Practice Coding</td>
+
+                <td>
+                    <input type="checkbox">
+                </td>
+
+            </tr>
+
+            <tr>
+
+                <td>8 PM</td>
+
+                <td>Revision</td>
+
+                <td>
+                    <input type="checkbox">
+                </td>
+
+            </tr>
+
+            <tr>
+
+                <td>10 PM</td>
+
+                <td>Sleep</td>
+
+                <td>
+                    <input type="checkbox">
+                </td>
+
+            </tr>
+
+        </table>
+
+    </div>
+
+</section>
+
+
+
+<section class="pomodoro-section">
+
+    <div class="pomodoro-box">
+
+        <h2>
+            Pomodoro Focus Timer 🍅
+        </h2>
+
+        <h1 id="timer">
+            25:00
+        </h1>
+
+        <div class="pomodoro-buttons">
+
+            <button id="start-timer">
+                Start
+            </button>
+
+            <button id="pause-timer">
+                Pause
+            </button>
+
+            <button id="reset-timer">
+                Reset
+            </button>
+
+        </div>
+
+    </div>
 
 </section>
 
@@ -135,8 +214,8 @@
         <h2>📖 Study Tips</h2>
 
         <p>
-            Stay consistent with small daily progress.
-            Consistency beats motivation.
+            Stay consistent with
+            small daily progress.
         </p>
 
     </div>
@@ -149,8 +228,7 @@
 
         <p>
             Drink enough water,
-            sleep properly,
-            and take short breaks while studying.
+            sleep properly and take breaks.
         </p>
 
     </div>
@@ -162,55 +240,9 @@
         <h2>🚀 Productivity</h2>
 
         <p>
-            Focus on one task at a time.
-            Avoid distractions while coding.
+            Focus on one task at a time
+            and avoid distractions.
         </p>
-
-    </div>
-
-</section>
-
-
-
-<section class="goals">
-
-    <h2>📈 Daily Productivity</h2>
-
-    <div class="progress-box">
-
-        <p>Coding Practice</p>
-
-        <div class="progress">
-
-            <div class="html-progress"></div>
-
-        </div>
-
-    </div>
-
-
-    <div class="progress-box">
-
-        <p>Revision</p>
-
-        <div class="progress">
-
-            <div class="css-progress"></div>
-
-        </div>
-
-    </div>
-
-
-    <div class="progress-box">
-
-        <p>Focus Level</p>
-
-        <div class="progress">
-
-            <div class="dsa-progress"></div>
-
-        </div>
 
     </div>
 
@@ -220,61 +252,21 @@
 
 <section class="quote-section">
 
-<<<<<<< HEAD
-    <h2>
-        “Discipline is choosing between what you want now
-        and what you want most.” ✨
-    </h2>
-
-</section>
-
-
-
-=======
     <h2 id="dynamic-quote">
-        “Small progress every day adds up to big results.” ✨
+
+        “Discipline is choosing between what you want now and what you want most.”
+
     </h2>
 
-    
+    <button id="new-quote-btn">
+
+        New Quote
+
+    </button>
 
 </section>
 
->>>>>>> 900b975 (Added basicjavascript and changed some features)
-<section class="goals">
-
-    <h2>🎯 Focus Session</h2>
-
-    <div class="focus-box">
-
-<<<<<<< HEAD
-        <h1>25:00</h1>
-
-        <p>Pomodoro Study Session</p>
-
-        <a href="https://pomofocus.io/" target="_blank"> StartNow </a>
-=======
-        <h1 id="timer">
-            25:00
-        </h1>
-
-        <p>Pomodoro Study Session</p>
-
-        <button id="start-timer">
-            Start Timer
-        </button>
->>>>>>> 900b975 (Added basicjavascript and changed some features)
-
-    </div>
-
-</section>
-
-<<<<<<< HEAD
-
-=======
 <script src="script.js"></script>
->>>>>>> 900b975 (Added basicjavascript and changed some features)
-
-
 
 </body>
 </html>

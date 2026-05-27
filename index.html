@@ -1,8 +1,13 @@
 <!DOCTYPE html>
+<html lang="en">
 
 <head>
 
-    
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
     <title>Student Survival Hub</title>
 
     <link rel="stylesheet"
@@ -20,7 +25,7 @@
 
 </head>
 
- <body class="home-page">
+<body class="home-page">
 
 <nav>
 
@@ -43,53 +48,64 @@
         <a href="contact.html">Contact</a>
 
     </div>
-<<<<<<< HEAD
-=======
+
     <button id="dark-mode-toggle">
         🌙
     </button>
->>>>>>> 900b975 (Added basicjavascript and changed some features)
 
 </nav>
+
+
 
 <section class="hero">
 
     <div class="hero-text">
 
-        <h1>
-            Your Ultimate
-            Student Companion 👩‍🏫
+        <span class="hero-tag">
+            Student Productivity Platform
+        </span>
+
+        <h1 id="greeting">
+            Good Evening 🌙
         </h1>
 
         <p>
-            Organize studies, track goals,
-            prepare for placements,
-            and stay motivated every day.
+            Organize your studies, prepare for placements,
+            manage productivity, and maintain balance
+            in student life.
         </p>
 
         <div class="hero-buttons">
 
             <a href="resources.html"
                class="btn">
+
                Explore Resources
+
             </a>
 
             <a href="placements.html"
                class="btn secondary-btn">
+
                Start Preparing
+
             </a>
 
         </div>
 
     </div>
 
+
+
     <div class="hero-image">
 
-        <img src="girlimage.png">
+        <img src="https://static.vecteezy.com/system/resources/thumbnails/069/509/674/small/a-woman-in-glasses-is-holding-a-book-and-pointing-png.png">
 
     </div>
 
 </section>
+
+
 
 <section class="features">
 
@@ -99,129 +115,89 @@
 
         <p>
             Access coding websites,
-            videos, and learning platforms.
+            videos and learning platforms.
         </p>
-        <a href="resources.html">
-            Explore
-              
-            </a>
 
     </div>
+
+
 
     <div class="card">
 
-        <h2>⏰ Timetable</h2>
-
+        <h2>⏰ Productivity</h2>
 
         <p>
-            Manage your daily routine
-            and stay productive.
+            Manage your routine,
+            focus sessions and goals.
         </p>
-        <a href="timetable.html">
-            Explore
-              
-            </a>
 
     </div>
+
+
 
     <div class="card">
 
         <h2>💼 Placements</h2>
 
         <p>
-            Prepare for interviews,
-            DSA, aptitude, and resume building.
+            Prepare for DSA,
+            aptitude and interviews.
         </p>
-        <a href="placements.html">
-            Explore
-              
-            </a>
 
     </div>
 
 </section>
 
+
+
 <section class="goals">
 
-    <h2>Today's Goals ✨</h2>
+    <div class="section-top">
 
-<<<<<<< HEAD
-    <ul contenteditable="true">
+        <h2>Today's Goals ✨</h2>
 
-        <li>Wake up Early</li>
+        <div id="live-clock"></div>
 
-        <li>Practice DSA problems in LeetCode.</li>
+    </div>
 
-        <li>Drink enough water</li>
-
-        <li>Sleep properly</li>
-
-    </ul>
-=======
     <div class="goal-input-box">
 
-        <input
-            type="text"
-            id="goal-input"
-            placeholder="Add today's goal..."
-        >
+        <input type="text"
+               id="goal-input"
+               placeholder="Add today's goal...">
 
         <button id="add-goal-btn">
-            Add
+
+            Add Goal
+
         </button>
 
     </div>
 
     <ul id="goal-list"></ul>
->>>>>>> 900b975 (Added basicjavascript and changed some features)
 
 </section>
 
-<section class="stats">
 
-    <div class="stat-box">
-
-        <h1>10+</h1>
-
-        <p>Learning Resources</p>
-
-    </div>
-
-    <div class="stat-box">
-
-        <h1>5+</h1>
-
-        <p>Student Tools</p>
-
-    </div>
-
-    <div class="stat-box">
-
-        <h1>100%</h1>
-
-        <p>Productivity Focused</p>
-
-    </div>
 
 <section class="quote-section">
 
-<<<<<<< HEAD
-    <h2>
-        “Success doesn't come from what you do occasionally,
-        it comes from what you do consistently.”
-    </h2>
-
-</section>
-   
-=======
     <h2 id="dynamic-quote">
-        “Small progress every day adds up to big results.” ✨
+
+        “Success is built through consistency.”
+
     </h2>
 
-   
+    <button id="new-quote-btn">
+
+        New Quote
+
+    </button>
 
 </section>
-   <script src="script.js"></script>
->>>>>>> 900b975 (Added basicjavascript and changed some features)
+
+<script src="script.js"></script>
+
 </body>
+
 </html>
