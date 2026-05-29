@@ -1,3 +1,94 @@
+/* ================= DARK MODE ================= */
+
+const darkModeBtn =
+document.getElementById("dark-mode-toggle");
+
+if(localStorage.getItem("darkMode")==="enabled"){
+
+    document.body.classList.add("dark-mode");
+}
+
+if(darkModeBtn){
+
+    darkModeBtn.addEventListener("click",()=>{
+
+        document.body.classList.toggle("dark-mode");
+
+        if(document.body.classList.contains("dark-mode")){
+
+            localStorage.setItem(
+                "darkMode",
+                "enabled"
+            );
+
+        }else{
+
+            localStorage.setItem(
+                "darkMode",
+                "disabled"
+            );
+        }
+    });
+}
+
+
+
+/* ================= LIVE CLOCK ================= */
+
+function updateClock(){
+
+    const clock =
+    document.getElementById("live-clock");
+
+    if(!clock) return;
+
+    const now = new Date();
+
+    clock.innerHTML =
+    now.toLocaleTimeString();
+}
+
+setInterval(updateClock,1000);
+
+updateClock();
+
+
+
+/* ================= GREETING ================= */
+
+function updateGreeting(){
+
+    const greeting =
+    document.getElementById("greeting");
+
+    if(!greeting) return;
+
+    const hour =
+    new Date().getHours();
+
+    if(hour < 12){
+
+        greeting.innerHTML =
+        "Good Morning ☀️";
+
+    }else if(hour < 17){
+
+        greeting.innerHTML =
+        "Good Afternoon 🌤️";
+
+    }else{
+
+        greeting.innerHTML =
+        "Good Evening 🌙";
+    }
+}
+
+updateGreeting();
+
+
+
+/* ================= GOALS ================= */
+
 const addGoalBtn =
 document.getElementById("add-goal-btn");
 
@@ -21,263 +112,137 @@ function renderGoals(){
         const li =
         document.createElement("li");
 
-        li.textContent = goal;
+        li.innerHTML = `
 
-        const deleteBtn =
-        document.createElement("button");
+        ${goal}
 
-        deleteBtn.textContent = "Delete";
+        <button onclick="deleteGoal(${index})">
 
-        deleteBtn.style.padding = "8px 14px";
+        Delete
 
-        deleteBtn.style.borderRadius = "10px";
+        </button>
 
-        deleteBtn.style.border = "none";
-
-        deleteBtn.style.background = "#6C63FF";
-
-        deleteBtn.style.color = "white";
-
-        deleteBtn.style.cursor = "pointer";
-
-        deleteBtn.onclick = function(){
-
-            goals.splice(index,1);
-
-            localStorage.setItem(
-                "goals",
-                JSON.stringify(goals)
-            );
-
-            renderGoals();
-        };
-
-        li.appendChild(deleteBtn);
+        `;
 
         goalList.appendChild(li);
     });
 }
 
+function deleteGoal(index){
+
+    goals.splice(index,1);
+
+    localStorage.setItem(
+        "goals",
+        JSON.stringify(goals)
+    );
+
+    renderGoals();
+}
+
 if(addGoalBtn){
 
-    addGoalBtn.addEventListener(
-        "click",
-        function(){
+    addGoalBtn.addEventListener("click",()=>{
 
-            const goalText =
-            goalInput.value.trim();
+        const value =
+        goalInput.value.trim();
 
-            if(goalText === "") return;
+        if(value==="") return;
 
-            goals.push(goalText);
+        goals.push(value);
 
-            localStorage.setItem(
-                "goals",
-                JSON.stringify(goals)
-            );
+        localStorage.setItem(
+            "goals",
+            JSON.stringify(goals)
+        );
 
-            renderGoals();
+        renderGoals();
 
-            goalInput.value = "";
-        }
-    );
+        goalInput.value="";
+    });
 }
 
 renderGoals();
 
 
 
+/* ================= QUOTES ================= */
+
 const quotes = [
 
-    "Success is built through consistency.",
+"Success is built through consistency.",
 
-    "Small progress every day matters.",
+"Dream big. Start small.",
 
-    "Discipline creates freedom.",
+"Stay disciplined and focused.",
 
-    "Stay focused on your goals.",
+"Your future depends on today.",
 
-    "Your future depends on what you do today."
+"Small progress matters daily.",
+
+"Success comes from consistency.",
+
+"Keep learning and growing.",
+
+"Discipline creates success."
+
 ];
-
-const quoteText =
-document.getElementById("dynamic-quote");
 
 const quoteBtn =
 document.getElementById("new-quote-btn");
 
+const quoteText =
+document.getElementById("dynamic-quote");
+
 if(quoteBtn){
 
-    quoteBtn.addEventListener(
-        "click",
-        function(){
+    quoteBtn.addEventListener("click",()=>{
 
-            const random =
-            Math.floor(Math.random()*quotes.length);
+        const random =
+        Math.floor(Math.random()*quotes.length);
 
-            quoteText.textContent =
-            quotes[random];
-        }
-    );
+        quoteText.innerHTML =
+        quotes[random];
+    });
 }
 
 
 
-const darkModeBtn =
-document.getElementById("dark-mode-toggle");
+/* ================= RESOURCE SEARCH ================= */
 
-if(localStorage.getItem("darkMode")
-=== "enabled"){
+const searchInput =
+document.getElementById("resource-search");
 
-    document.body.classList.add("dark-mode");
-}
+if(searchInput){
 
-if(darkModeBtn){
+    searchInput.addEventListener("keyup",()=>{
 
-    darkModeBtn.addEventListener(
-        "click",
-        function(){
+        const value =
+        searchInput.value.toLowerCase();
 
-            document.body.classList.toggle(
-                "dark-mode"
-            );
+        const cards =
+        document.querySelectorAll(".resource-card");
 
-            if(document.body.classList
-                .contains("dark-mode")){
+        cards.forEach((card)=>{
 
-                localStorage.setItem(
-                    "darkMode",
-                    "enabled"
-                );
+            const text =
+            card.innerText.toLowerCase();
+
+            if(text.includes(value)){
+
+                card.style.display="block";
 
             }else{
 
-                localStorage.setItem(
-                    "darkMode",
-                    "disabled"
-                );
+                card.style.display="none";
             }
-        }
-    );
+        });
+    });
 }
 
 
 
-function updateClock(){
-
-    const clock =
-    document.getElementById("live-clock");
-
-    if(!clock) return;
-
-    const now = new Date();
-
-    clock.textContent =
-    now.toLocaleTimeString();
-}
-
-setInterval(updateClock,1000);
-
-updateClock();
-
-
-
-function updateGreeting(){
-
-    const greeting =
-    document.getElementById("greeting");
-
-    if(!greeting) return;
-
-    const hour =
-    new Date().getHours();
-
-    if(hour < 12){
-
-        greeting.textContent =
-        "Good Morning ☀️";
-
-    }else if(hour < 18){
-
-        greeting.textContent =
-        "Good Afternoon 🌤";
-
-    }else{
-
-        greeting.textContent =
-        "Good Evening 🌙";
-    }
-}
-
-updateGreeting();
-const searchInput =
-document.getElementById("resource-search");
-
-if(searchInput){
-
-    searchInput.addEventListener(
-        "keyup",
-        function(){
-
-            const value =
-            searchInput.value.toLowerCase();
-
-            const cards =
-            document.querySelectorAll(".resource-card");
-
-            cards.forEach((card)=>{
-
-                const text =
-                card.textContent.toLowerCase();
-
-                if(text.includes(value)){
-
-                    card.style.display = "block";
-
-                }else{
-
-                    card.style.display = "none";
-                }
-            });
-        }
-    );
-}
-const searchInput =
-document.getElementById("resource-search");
-
-if(searchInput){
-
-    searchInput.addEventListener(
-        "keyup",
-        function(){
-
-            const value =
-            searchInput.value.toLowerCase();
-
-            const cards =
-            document.querySelectorAll(".resource-card");
-
-            cards.forEach((card)=>{
-
-                const text =
-                card.textContent.toLowerCase();
-
-                if(text.includes(value)){
-
-                    card.style.display = "block";
-
-                }else{
-
-                    card.style.display = "none";
-                }
-
-            });
-
-        }
-    );
-}
-
-
+/* ================= RESOURCE FILTER ================= */
 
 const categoryButtons =
 document.querySelectorAll(".category-btn");
@@ -287,40 +252,32 @@ document.querySelectorAll(".resource-card");
 
 categoryButtons.forEach((button)=>{
 
-    button.addEventListener(
-        "click",
-        function(){
+    button.addEventListener("click",()=>{
 
-            const category =
-            button.dataset.category;
+        const category =
+        button.dataset.category;
 
-            resourceCards.forEach((card)=>{
+        resourceCards.forEach((card)=>{
 
-                if(category === "all"){
+            if(
+                category==="all" ||
+                card.dataset.category===category
+            ){
 
-                    card.style.display = "block";
+                card.style.display="block";
 
-                }
+            }else{
 
-                else if(
-                    card.dataset.category === category
-                ){
-
-                    card.style.display = "block";
-
-                }
-
-                else{
-
-                    card.style.display = "none";
-                }
-
-            });
-
-        }
-    );
-
+                card.style.display="none";
+            }
+        });
+    });
 });
+
+
+
+/* ================= POMODORO ================= */
+
 let timer;
 let timeLeft = 1500;
 
@@ -336,201 +293,242 @@ document.getElementById("pause-timer");
 const resetBtn =
 document.getElementById("reset-timer");
 
-function updateTimerDisplay(){
+function updateTimer(){
 
     if(!timerDisplay) return;
 
     const minutes =
-    Math.floor(timeLeft / 60);
+    Math.floor(timeLeft/60);
 
     const seconds =
-    timeLeft % 60;
+    timeLeft%60;
 
-    timerDisplay.textContent =
-    `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
+    timerDisplay.innerHTML =
+    `${minutes}:${seconds<10?"0":""}${seconds}`;
 }
 
 if(startBtn){
 
-    startBtn.addEventListener(
-        "click",
-        function(){
+    startBtn.addEventListener("click",()=>{
 
-            clearInterval(timer);
+        clearInterval(timer);
 
-            timer = setInterval(()=>{
+        timer = setInterval(()=>{
 
-                if(timeLeft > 0){
+            if(timeLeft>0){
 
-                    timeLeft--;
+                timeLeft--;
 
-                    updateTimerDisplay();
+                updateTimer();
 
-                }
+            }else{
 
-            },1000);
+                clearInterval(timer);
+            }
 
-        }
-    );
+        },1000);
+    });
 }
 
 if(pauseBtn){
 
-    pauseBtn.addEventListener(
-        "click",
-        function(){
+    pauseBtn.addEventListener("click",()=>{
 
-            clearInterval(timer);
-
-        }
-    );
+        clearInterval(timer);
+    });
 }
 
 if(resetBtn){
 
-    resetBtn.addEventListener(
-        "click",
-        function(){
+    resetBtn.addEventListener("click",()=>{
 
-            clearInterval(timer);
+        clearInterval(timer);
 
-            timeLeft = 1500;
+        timeLeft = 1500;
 
-            updateTimerDisplay();
-
-        }
-    );
+        updateTimer();
+    });
 }
 
-updateTimerDisplay();
-const placementQuotes = [
-
-    "Your future depends on what you do today.",
-
-    "Consistency is the key to placement success.",
-
-    "Small daily improvements lead to big opportunities.",
-
-    "Practice makes confidence.",
-
-    "Dream companies need disciplined preparation."
-
-];
-
-const placementQuoteText =
-document.getElementById("dynamic-quote");
-
-const placementQuoteBtn =
-document.getElementById("new-quote-btn");
-
-if(placementQuoteBtn){
-
-    placementQuoteBtn.addEventListener(
-        "click",
-        function(){
-
-            const random =
-            Math.floor(
-                Math.random() *
-                placementQuotes.length
-            );
-
-            placementQuoteText.textContent =
-            placementQuotes[random];
-
-        }
-    );
-}
+updateTimer();
 
 
 
-function updatePlacementClock(){
+/* ================= RESUME CHECKLIST ================= */
 
-    const placementClock =
-    document.getElementById("live-clock");
+const checkboxes =
+document.querySelectorAll(".resume-items input");
 
-    if(!placementClock) return;
+checkboxes.forEach((checkbox,index)=>{
 
-    const now = new Date();
-
-    placementClock.textContent =
-    now.toLocaleTimeString();
-
-}
-
-setInterval(updatePlacementClock,1000);
-
-updatePlacementClock();
-
-
-
-const placementCheckboxes =
-document.querySelectorAll(
-    ".resume-items input"
-);
-
-placementCheckboxes.forEach((checkbox,index)=>{
-
-    const savedValue =
+    const saved =
     localStorage.getItem(
-        `resume-check-${index}`
+        `resume-${index}`
     );
 
-    if(savedValue === "true"){
+    if(saved==="true"){
 
-        checkbox.checked = true;
+        checkbox.checked=true;
     }
 
-    checkbox.addEventListener(
-        "change",
-        function(){
+    checkbox.addEventListener("change",()=>{
 
-            localStorage.setItem(
-                `resume-check-${index}`,
-                checkbox.checked
-            );
+        localStorage.setItem(
+            `resume-${index}`,
+            checkbox.checked
+        );
+    });
+});
 
-        }
+
+
+/* ================= MOCK INTERVIEW TRACKER ================= */
+
+const addInterviewBtn =
+document.getElementById("add-interview-btn");
+
+const companyInput =
+document.getElementById("company-input");
+
+const roundInput =
+document.getElementById("round-input");
+
+const statusInput =
+document.getElementById("status-input");
+
+const interviewTable =
+document.getElementById("interview-table-body");
+
+let interviews =
+JSON.parse(localStorage.getItem("interviews")) || [];
+
+function renderInterviews(){
+
+    if(!interviewTable) return;
+
+    interviewTable.innerHTML="";
+
+    interviews.forEach((item,index)=>{
+
+        const row =
+        document.createElement("tr");
+
+        row.innerHTML=`
+
+        <td>${item.company}</td>
+
+        <td>${item.round}</td>
+
+        <td contenteditable="true">
+
+        ${item.status}
+
+        </td>
+
+        <td>
+
+        <button onclick="deleteInterview(${index})">
+
+        Delete
+
+        </button>
+
+        </td>
+
+        `;
+
+        interviewTable.appendChild(row);
+    });
+}
+
+function deleteInterview(index){
+
+    interviews.splice(index,1);
+
+    localStorage.setItem(
+        "interviews",
+        JSON.stringify(interviews)
     );
 
-});
+    renderInterviews();
+}
+
+if(addInterviewBtn){
+
+    addInterviewBtn.addEventListener("click",()=>{
+
+        const company =
+        companyInput.value.trim();
+
+        const round =
+        roundInput.value.trim();
+
+        const status =
+        statusInput.value.trim();
+
+        if(
+            company==="" ||
+            round==="" ||
+            status===""
+        ) return;
+
+        interviews.push({
+            company,
+            round,
+            status
+        });
+
+        localStorage.setItem(
+            "interviews",
+            JSON.stringify(interviews)
+        );
+
+        renderInterviews();
+
+        companyInput.value="";
+        roundInput.value="";
+        statusInput.value="";
+    });
+}
+
+renderInterviews();
+
+
+
+/* ================= MOOD ================= */
+
 const moodButtons =
 document.querySelectorAll(".mood-btn");
 
 const moodText =
 document.getElementById("mood-text");
 
-const moods = {
+const moodMessages = {
 
-    "😊":"Happy and motivated ✨",
+    "😊":"Happy and productive ✨",
 
-    "😌":"Relaxed and peaceful 🌸",
+    "😌":"Relaxed and calm 🌸",
 
-    "😴":"Feeling sleepy 😴",
+    "😴":"Take proper rest 😴",
 
-    "😭":"It's okay to rest and recharge 💖"
+    "😭":"Everything will be okay 💖"
 };
 
 moodButtons.forEach((button)=>{
 
-    button.addEventListener(
-        "click",
-        function(){
+    button.addEventListener("click",()=>{
 
-            const mood =
-            button.textContent;
+        const mood =
+        button.innerHTML;
 
-            moodText.textContent =
-            moods[mood];
+        moodText.innerHTML =
+        moodMessages[mood];
 
-            localStorage.setItem(
-                "savedMood",
-                moods[mood]
-            );
-
-        }
-    );
-
+        localStorage.setItem(
+            "savedMood",
+            moodMessages[mood]
+        );
+    });
 });
 
 const savedMood =
@@ -538,134 +536,99 @@ localStorage.getItem("savedMood");
 
 if(savedMood && moodText){
 
-    moodText.textContent = savedMood;
+    moodText.innerHTML =
+    savedMood;
 }
 
 
 
-const stressQuotes = [
+/* ================= CONTACT FORM ================= */
 
-    "Take a deep breath. You are stronger than you think.",
-
-    "Rest is productive too.",
-
-    "Your mental health matters.",
-
-    "You don’t need to figure out everything today.",
-
-    "Small breaks improve big journeys."
-
-];
-
-const stressQuoteBtn =
-document.getElementById("new-quote-btn");
-
-const stressQuoteText =
-document.getElementById("dynamic-quote");
-
-if(stressQuoteBtn){
-
-    stressQuoteBtn.addEventListener(
-        "click",
-        function(){
-
-            const random =
-            Math.floor(
-                Math.random() *
-                stressQuotes.length
-            );
-
-            stressQuoteText.textContent =
-            stressQuotes[random];
-
-        }
-    );
-}
 const contactForm =
 document.getElementById("contact-form");
 
 const formMessage =
 document.getElementById("form-message");
 
+const feedbackList =
+document.getElementById("feedback-list");
+
+let feedbacks =
+JSON.parse(localStorage.getItem("feedbacks")) || [];
+
+function renderFeedbacks(){
+
+    if(!feedbackList) return;
+
+    feedbackList.innerHTML="";
+
+    feedbacks.forEach((item)=>{
+
+        const li =
+        document.createElement("li");
+
+        li.innerHTML=`
+
+        <strong>${item.name}</strong>
+
+        - ${item.message}
+
+        `;
+
+        feedbackList.appendChild(li);
+    });
+}
+
 if(contactForm){
 
-    contactForm.addEventListener(
-        "submit",
-        function(event){
+    contactForm.addEventListener("submit",(e)=>{
 
-            event.preventDefault();
+        e.preventDefault();
 
-            const name =
-            document.getElementById("name").value;
+        const name =
+        document.getElementById("name").value;
 
-            const email =
-            document.getElementById("email").value;
+        const email =
+        document.getElementById("email").value;
 
-            const phone =
-            document.getElementById("phone").value;
+        const phone =
+        document.getElementById("phone").value;
 
-            const message =
-            document.getElementById("message").value;
+        const message =
+        document.getElementById("message").value;
 
-            if(
-                name === "" ||
-                email === "" ||
-                phone === "" ||
-                message === ""
-            ){
+        if(
+            name==="" ||
+            email==="" ||
+            phone==="" ||
+            message===""
+        ){
 
-                formMessage.textContent =
-                "Please fill all fields.";
+            formMessage.innerHTML =
+            "Please fill all fields.";
 
-                return;
-            }
-
-            formMessage.textContent =
-            "Feedback submitted successfully 💖";
-
-            contactForm.reset();
-
+            return;
         }
-    );
+
+        feedbacks.push({
+            name,
+            email,
+            phone,
+            message
+        });
+
+        localStorage.setItem(
+            "feedbacks",
+            JSON.stringify(feedbacks)
+        );
+
+        renderFeedbacks();
+
+        formMessage.innerHTML =
+        "Feedback submitted successfully 💖";
+
+        contactForm.reset();
+    });
 }
 
-
-
-const contactQuotes = [
-
-    "Every great project starts with a small idea.",
-
-    "Feedback helps us grow better.",
-
-    "Small ideas can create big changes.",
-
-    "Student voices matter the most.",
-
-    "Creativity begins with curiosity."
-
-];
-
-const contactQuoteBtn =
-document.getElementById("new-quote-btn");
-
-const contactQuoteText =
-document.getElementById("dynamic-quote");
-
-if(contactQuoteBtn){
-
-    contactQuoteBtn.addEventListener(
-        "click",
-        function(){
-
-            const random =
-            Math.floor(
-                Math.random() *
-                contactQuotes.length
-            );
-
-            contactQuoteText.textContent =
-            contactQuotes[random];
-
-        }
-    );
-}
+renderFeedbacks();

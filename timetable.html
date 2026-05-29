@@ -8,7 +8,9 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
 
-    <title>Timetable</title>
+    <title>
+        Timetable
+    </title>
 
     <link rel="stylesheet"
           href="style.css">
@@ -27,176 +29,267 @@
 
 <body class="timetable-page">
 
+<!-- ================= NAVBAR ================= -->
+
 <nav>
 
     <div class="logo">
+
         Student Survival Hub
+
     </div>
 
     <div class="nav-links">
 
-        <a href="index.html">Home</a>
+        <a href="index.html">
+            Home
+        </a>
 
-        <a href="resources.html">Resources</a>
+        <a href="resources.html">
+            Resources
+        </a>
 
-        <a href="timetable.html">Timetable</a>
+        <a href="timetable.html">
+            Timetable
+        </a>
 
-        <a href="placements.html">Placements</a>
+        <a href="placements.html">
+            Placements
+        </a>
 
-        <a href="stress.html">Stress Relief</a>
+        <a href="stress.html">
+            Stress Relief
+        </a>
 
-        <a href="contact.html">Contact</a>
+        <a href="contact.html">
+            Contact
+        </a>
 
     </div>
 
     <button id="dark-mode-toggle">
+
         🌙
+
     </button>
 
 </nav>
 
 
 
-<section class="timetable-hero">
+<!-- ================= HERO ================= -->
 
-    <div class="timetable-text">
+<section class="hero">
+
+    <div class="hero-text">
 
         <span class="hero-tag">
+
             Productivity Planner
+
         </span>
 
         <h1>
+
             Plan Your Day Better ⏰
+
         </h1>
 
         <p>
+
             Organize your schedule,
-            stay productive and
-            manage focus sessions effectively.
+            manage productivity,
+            track study sessions,
+            and stay disciplined daily.
+
         </p>
 
     </div>
 
-</section>
 
 
+    <div class="hero-image">
 
-<section class="table-section">
-
-    <div class="table-container">
-
-        <div class="section-top">
-
-            <h2>Daily Timetable</h2>
-
-            <div id="live-clock"></div>
-
-        </div>
-
-        <table class="modern-table">
-
-            <tr>
-
-                <th>Time</th>
-
-                <th>Activity</th>
-
-                <th>Status</th>
-
-            </tr>
-
-            <tr>
-
-                <td>7 AM</td>
-
-                <td>Wake Up</td>
-
-                <td>
-                    <input type="checkbox">
-                </td>
-
-            </tr>
-
-            <tr>
-
-                <td>9 AM</td>
-
-                <td>College</td>
-
-                <td>
-                    <input type="checkbox">
-                </td>
-
-            </tr>
-
-            <tr>
-
-                <td>6 PM</td>
-
-                <td>Practice Coding</td>
-
-                <td>
-                    <input type="checkbox">
-                </td>
-
-            </tr>
-
-            <tr>
-
-                <td>8 PM</td>
-
-                <td>Revision</td>
-
-                <td>
-                    <input type="checkbox">
-                </td>
-
-            </tr>
-
-            <tr>
-
-                <td>10 PM</td>
-
-                <td>Sleep</td>
-
-                <td>
-                    <input type="checkbox">
-                </td>
-
-            </tr>
-
-        </table>
+        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135789.png">
 
     </div>
 
 </section>
 
 
+
+<!-- ================= TIMETABLE ================= -->
+
+<section class="goals">
+
+    <div class="section-top">
+
+        <h2>
+
+            Daily Timetable 📅
+
+        </h2>
+
+        <div id="live-clock">
+
+            00:00:00
+
+        </div>
+
+    </div>
+
+
+
+    <table class="modern-table">
+
+        <tr>
+
+            <th>
+                Time
+            </th>
+
+            <th>
+                Activity
+            </th>
+
+            <th>
+                Status
+            </th>
+
+        </tr>
+
+
+
+        <tr>
+
+            <td>
+                7 AM
+            </td>
+
+            <td>
+                Wake Up
+            </td>
+
+            <td>
+                <input type="checkbox">
+            </td>
+
+        </tr>
+
+
+
+        <tr>
+
+            <td>
+                9 AM
+            </td>
+
+            <td>
+                College
+            </td>
+
+            <td>
+                <input type="checkbox">
+            </td>
+
+        </tr>
+
+
+
+        <tr>
+
+            <td>
+                6 PM
+            </td>
+
+            <td>
+                Coding Practice
+            </td>
+
+            <td>
+                <input type="checkbox">
+            </td>
+
+        </tr>
+
+
+
+        <tr>
+
+            <td>
+                8 PM
+            </td>
+
+            <td>
+                Revision
+            </td>
+
+            <td>
+                <input type="checkbox">
+            </td>
+
+        </tr>
+
+
+
+        <tr>
+
+            <td>
+                10 PM
+            </td>
+
+            <td>
+                Sleep
+            </td>
+
+            <td>
+                <input type="checkbox">
+            </td>
+
+        </tr>
+
+    </table>
+
+</section>
+
+
+
+<!-- ================= POMODORO ================= -->
 
 <section class="pomodoro-section">
 
     <div class="pomodoro-box">
 
         <h2>
+
             Pomodoro Focus Timer 🍅
+
         </h2>
 
         <h1 id="timer">
+
             25:00
+
         </h1>
 
         <div class="pomodoro-buttons">
 
             <button id="start-timer">
+
                 Start
+
             </button>
 
             <button id="pause-timer">
+
                 Pause
+
             </button>
 
             <button id="reset-timer">
+
                 Reset
+
             </button>
 
         </div>
@@ -207,15 +300,24 @@
 
 
 
+<!-- ================= PRODUCTIVITY CARDS ================= -->
+
 <section class="features">
 
     <div class="card">
 
-        <h2>📖 Study Tips</h2>
+        <h2>
+
+            📖 Study Tips
+
+        </h2>
 
         <p>
+
             Stay consistent with
             small daily progress.
+            Consistency beats motivation.
+
         </p>
 
     </div>
@@ -224,11 +326,18 @@
 
     <div class="card">
 
-        <h2>💧 Health Reminder</h2>
+        <h2>
+
+            💧 Health Reminder
+
+        </h2>
 
         <p>
+
             Drink enough water,
-            sleep properly and take breaks.
+            sleep properly,
+            and take small breaks while studying.
+
         </p>
 
     </div>
@@ -237,11 +346,18 @@
 
     <div class="card">
 
-        <h2>🚀 Productivity</h2>
+        <h2>
+
+            🚀 Productivity
+
+        </h2>
 
         <p>
-            Focus on one task at a time
-            and avoid distractions.
+
+            Focus on one task at a time.
+            Avoid distractions
+            and improve concentration.
+
         </p>
 
     </div>
@@ -250,21 +366,45 @@
 
 
 
-<section class="quote-section">
+<!-- ================= DAILY GOALS ================= -->
 
-    <h2 id="dynamic-quote">
+<section class="goals">
 
-        “Discipline is choosing between what you want now and what you want most.”
+    <h2>
+
+        Daily Productivity Goals 🎯
 
     </h2>
 
-    <button id="new-quote-btn">
+    <div class="goal-input-box">
 
-        New Quote
+        <input type="text"
+               id="goal-input"
+               placeholder="Add productivity goal...">
 
-    </button>
+        <button id="add-goal-btn">
+
+            Add Goal
+
+        </button>
+
+    </div>
+
+    <ul id="goal-list">
+
+    </ul>
 
 </section>
+
+
+
+
+
+
+
+
+
+
 
 <script src="script.js"></script>
 
