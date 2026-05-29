@@ -8,7 +8,9 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
 
-    <title>Study Resources</title>
+    <title>
+        Study Resources
+    </title>
 
     <link rel="stylesheet"
           href="style.css">
@@ -27,53 +29,89 @@
 
 <body class="resources-page">
 
+<!-- ================= NAVBAR ================= -->
+
 <nav>
 
     <div class="logo">
+
         Student Survival Hub
+
     </div>
 
     <div class="nav-links">
 
-        <a href="index.html">Home</a>
+        <a href="index.html">
+            Home
+        </a>
 
-        <a href="resources.html">Resources</a>
+        <a href="resources.html">
+            Resources
+        </a>
 
-        <a href="timetable.html">Timetable</a>
+        <a href="timetable.html">
+            Timetable
+        </a>
 
-        <a href="placements.html">Placements</a>
+        <a href="placements.html">
+            Placements
+        </a>
 
-        <a href="stress.html">Stress Relief</a>
+        <a href="stress.html">
+            Stress Relief
+        </a>
 
-        <a href="contact.html">Contact</a>
+        <a href="contact.html">
+            Contact
+        </a>
 
     </div>
 
     <button id="dark-mode-toggle">
+
         🌙
+
     </button>
 
 </nav>
 
 
 
-<section class="resources-hero">
+<!-- ================= HERO ================= -->
 
-    <div class="resources-text">
+<section class="hero">
+
+    <div class="hero-text">
 
         <span class="hero-tag">
-            Smart Learning Space
+
+            Student Learning Hub
+
         </span>
 
         <h1>
-            Explore Premium Learning Resources 📚
+
+            Explore Useful Resources 📚
+
         </h1>
 
         <p>
-            Discover coding platforms,
-            tutorials and tools that help
-            you improve your skills faster.
+
+            Learn web development,
+            DSA, aptitude,
+            interview preparation,
+            and improve your coding skills
+            with curated learning platforms.
+
         </p>
+
+    </div>
+
+
+
+    <div class="hero-image">
+
+        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135755.png">
 
     </div>
 
@@ -81,9 +119,21 @@
 
 
 
-<section class="resources-section">
+<!-- ================= SEARCH ================= -->
 
-    <div class="search-container">
+<section class="goals">
+
+    <div class="section-top">
+
+        <h2>
+
+            Search Learning Resources 🔍
+
+        </h2>
+
+    </div>
+
+    <div class="goal-input-box">
 
         <input type="text"
                id="resource-search"
@@ -91,254 +141,351 @@
 
     </div>
 
+</section>
 
 
-    <div class="category-buttons">
 
-        <button class="category-btn"
-                data-category="all">
+<!-- ================= CATEGORY FILTER ================= -->
 
-            All
+<section class="features">
 
-        </button>
+    <button class="category-btn"
+            data-category="all">
 
-        <button class="category-btn"
-                data-category="web">
+        All
 
-            Web Dev
+    </button>
 
-        </button>
+    <button class="category-btn"
+            data-category="webdev">
 
-        <button class="category-btn"
-                data-category="dsa">
+        Web Dev
 
-            DSA
+    </button>
 
-        </button>
+    <button class="category-btn"
+            data-category="dsa">
 
-        <button class="category-btn"
-                data-category="practice">
+        DSA
 
-            Practice
+    </button>
 
-        </button>
+    <button class="category-btn"
+            data-category="aptitude">
 
-        <button class="category-btn"
-                data-category="tutorials">
+        Aptitude
 
-            Tutorials
+    </button>
 
-        </button>
+    <button class="category-btn"
+            data-category="placement">
+
+        Placements
+
+    </button>
+
+</section>
+
+
+
+<!-- ================= RESOURCES ================= -->
+
+<section class="resource-grid">
+
+    <!-- WEB DEV -->
+
+    <div class="resource-card"
+         data-category="webdev">
+
+        <h2>
+
+            🌐 W3Schools
+
+        </h2>
+
+        <p>
+
+            Learn HTML,
+            CSS,
+            JavaScript,
+            SQL,
+            and web development basics.
+
+        </p>
+
+        <a href="https://www.w3schools.com/"
+           target="_blank"
+           class="btn">
+
+            Visit
+
+        </a>
 
     </div>
 
 
 
-    <div class="resource-grid">
+    <div class="resource-card"
+         data-category="webdev">
 
+        <h2>
 
+            🚀 freeCodeCamp
 
-        <div class="resource-card"
-             data-category="dsa">
+        </h2>
 
-            <span class="resource-tag">
-                DSA
-            </span>
+        <p>
 
-            <h2>💻 GeeksforGeeks</h2>
+            Full coding tutorials,
+            certifications,
+            and real-world projects.
 
-            <p>
-                Learn DSA, interview preparation
-                and competitive programming.
-            </p>
+        </p>
 
-            <div class="resource-bottom">
+        <a href="https://www.freecodecamp.org/"
+           target="_blank"
+           class="btn">
 
-                <a href="https://www.geeksforgeeks.org/"
-                   target="_blank"
-                   class="btn">
+            Visit
 
-                   Visit
+        </a>
 
-                </a>
+    </div>
 
-                <button class="bookmark-btn">
-                    ⭐
-                </button>
 
-            </div>
 
-        </div>
+    <div class="resource-card"
+         data-category="webdev">
 
+        <h2>
 
+            🎨 Frontend Mentor
 
-        <div class="resource-card"
-             data-category="practice">
+        </h2>
 
-            <span class="resource-tag">
-                Practice
-            </span>
+        <p>
 
-            <h2>🧠 LeetCode</h2>
+            Practice frontend development
+            using real-world UI challenges.
 
-            <p>
-                Practice coding problems
-                and improve problem-solving.
-            </p>
+        </p>
 
-            <div class="resource-bottom">
+        <a href="https://www.frontendmentor.io/"
+           target="_blank"
+           class="btn">
 
-                <a href="https://leetcode.com/"
-                   target="_blank"
-                   class="btn">
+            Visit
 
-                   Visit
+        </a>
 
-                </a>
+    </div>
 
-                <button class="bookmark-btn">
-                    ⭐
-                </button>
 
-            </div>
 
-        </div>
+    <!-- DSA -->
 
+    <div class="resource-card"
+         data-category="dsa">
 
+        <h2>
 
-        <div class="resource-card"
-             data-category="web">
+            💻 GeeksforGeeks
 
-            <span class="resource-tag">
-                Web Dev
-            </span>
+        </h2>
 
-            <h2>🌐 W3Schools</h2>
+        <p>
 
-            <p>
-                Learn HTML, CSS,
-                JavaScript and SQL easily.
-            </p>
+            Learn DSA,
+            coding,
+            interview preparation,
+            and competitive programming.
 
-            <div class="resource-bottom">
+        </p>
 
-                <a href="https://www.w3schools.com/"
-                   target="_blank"
-                   class="btn">
+        <a href="https://www.geeksforgeeks.org/"
+           target="_blank"
+           class="btn">
 
-                   Visit
+            Visit
 
-                </a>
+        </a>
 
-                <button class="bookmark-btn">
-                    ⭐
-                </button>
+    </div>
 
-            </div>
 
-        </div>
 
+    <div class="resource-card"
+         data-category="dsa">
 
+        <h2>
 
-        <div class="resource-card"
-             data-category="tutorials">
+            🧠 LeetCode
 
-            <span class="resource-tag">
-                Tutorials
-            </span>
+        </h2>
 
-            <h2>🎥 Code With Harry</h2>
+        <p>
 
-            <p>
-                Beginner-friendly coding tutorials
-                for web development.
-            </p>
+            Practice coding problems
+            and improve problem-solving skills.
 
-            <div class="resource-bottom">
+        </p>
 
-                <a href="https://www.youtube.com/codewithharry"
-                   target="_blank"
-                   class="btn">
+        <a href="https://leetcode.com/"
+           target="_blank"
+           class="btn">
 
-                   Watch
+            Visit
 
-                </a>
+        </a>
 
-                <button class="bookmark-btn">
-                    ⭐
-                </button>
+    </div>
 
-            </div>
 
-        </div>
 
+    <div class="resource-card"
+         data-category="dsa">
 
+        <h2>
 
-        <div class="resource-card"
-             data-category="tutorials">
+            🔥 HackerRank
 
-            <span class="resource-tag">
-                Tutorials
-            </span>
+        </h2>
 
-            <h2>🚀 freeCodeCamp</h2>
+        <p>
 
-            <p>
-                Certifications,
-                coding tutorials and projects.
-            </p>
+            Improve coding,
+            problem-solving,
+            and interview preparation.
 
-            <div class="resource-bottom">
+        </p>
 
-                <a href="https://www.youtube.com/@freecodecamp"
-                   target="_blank"
-                   class="btn">
+        <a href="https://www.hackerrank.com/"
+           target="_blank"
+           class="btn">
 
-                   Watch
+            Visit
 
-                </a>
+        </a>
 
-                <button class="bookmark-btn">
-                    ⭐
-                </button>
+    </div>
 
-            </div>
 
-        </div>
 
+    <!-- APTITUDE -->
 
+    <div class="resource-card"
+         data-category="aptitude">
 
-        <div class="resource-card"
-             data-category="practice">
+        <h2>
 
-            <span class="resource-tag">
-                Practice
-            </span>
+            📘 IndiaBix
 
-            <h2>🎨 Bro Code</h2>
+        </h2>
 
-            <p>
-                Learn coding while
-                building real world projects.
-            </p>
+        <p>
 
-            <div class="resource-bottom">
+            Practice aptitude,
+            reasoning,
+            verbal ability,
+            and interview questions.
 
-                <a href="https://www.youtube.com/channel/UC4SVo0Ue36XCfOyb5Lh1viQ"
-                   target="_blank"
-                   class="btn">
+        </p>
 
-                   Watch
+        <a href="https://www.indiabix.com/"
+           target="_blank"
+           class="btn">
 
-                </a>
+            Visit
 
-                <button class="bookmark-btn">
-                    ⭐
-                </button>
+        </a>
 
-            </div>
+    </div>
 
-        </div>
+
+
+    <div class="resource-card"
+         data-category="aptitude">
+
+        <h2>
+
+            📝 Freshersworld
+
+        </h2>
+
+        <p>
+
+            Aptitude practice,
+            mock tests,
+            and placement preparation.
+
+        </p>
+
+        <a href="https://www.freshersworld.com/"
+           target="_blank"
+           class="btn">
+
+            Visit
+
+        </a>
+
+    </div>
+
+
+
+    <!-- PLACEMENTS -->
+
+    <div class="resource-card"
+         data-category="placement">
+
+        <h2>
+
+            💼 InterviewBit
+
+        </h2>
+
+        <p>
+
+            Prepare for coding interviews,
+            DSA,
+            and technical rounds.
+
+        </p>
+
+        <a href="https://www.interviewbit.com/"
+           target="_blank"
+           class="btn">
+
+            Visit
+
+        </a>
+
+    </div>
+
+
+
+    <div class="resource-card"
+         data-category="placement">
+
+        <h2>
+
+            🎤 Pramp
+
+        </h2>
+
+        <p>
+
+            Attend free mock interviews
+            with peers online.
+
+        </p>
+
+        <a href="https://www.pramp.com/"
+           target="_blank"
+           class="btn">
+
+            Visit
+
+        </a>
 
     </div>
 
@@ -346,13 +493,80 @@
 
 
 
-<section class="quote-section">
+<!-- ================= SKILL PROGRESS ================= -->
+
+<section class="goals">
 
     <h2>
-        “Learning never exhausts the mind.” ✨
+
+        Skill Progress 📈
+
     </h2>
 
+
+
+    <div class="progress-box">
+
+        <p>
+            HTML
+        </p>
+
+        <div class="progress">
+
+            <div class="html-progress">
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="progress-box">
+
+        <p>
+            CSS
+        </p>
+
+        <div class="progress">
+
+            <div class="css-progress">
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="progress-box">
+
+        <p>
+            DSA
+        </p>
+
+        <div class="progress">
+
+            <div class="dsa-progress">
+
+            </div>
+
+        </div>
+
+    </div>
+
 </section>
+
+
+
+
+
+
+
+
+
 
 <script src="script.js"></script>
 
